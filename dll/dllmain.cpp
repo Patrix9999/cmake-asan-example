@@ -8,6 +8,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dReason, LPVOID lpReserved)
         {
             auto ptr = new int;
             delete ptr;
+
+            // uncomment this line to see how ASAN works
             //delete ptr;
 
             MessageBoxA(NULL, "DLL Loaded", "DllMain", MB_OK);
